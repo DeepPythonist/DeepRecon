@@ -1,0 +1,43 @@
+{
+  "errors": {
+    "invalid_domain": "فرمت دامنه نامعتبر است",
+    "invalid_ip": "فرمت آدرس IP نامعتبر است",
+    "connection_timeout": "زمان اتصال به پایان رسید",
+    "dns_resolution_failed": "خطا در تفکیک DNS",
+    "ssl_error": "خطای گواهی SSL",
+    "whois_error": "خطا در جستجوی WHOIS",
+    "network_error": "خطای شبکه رخ داد",
+    "not_found": "منبع یافت نشد",
+    "permission_denied": "دسترسی رد شد",
+    "rate_limited": "محدودیت نرخ درخواست"
+  },
+  "messages": {
+    "checking_domain": "بررسی دامنه",
+    "resolving_ip": "تبدیل به آدرس IP",
+    "fetching_dns": "دریافت رکوردهای DNS",
+    "checking_ssl": "بررسی گواهی SSL",
+    "performing_whois": "جستجوی WHOIS",
+    "locating_ip": "یافتن موقعیت جغرافیایی IP",
+    "checking_availability": "بررسی دسترس‌پذیری",
+    "scanning_security": "اسکن امنیتی",
+    "detecting_tech": "شناسایی تکنولوژی‌ها",
+    "complete": "تحلیل کامل شد"
+  },
+  "results": {
+    "ip_address": "آدرس IP",
+    "domain_name": "نام دامنه",
+    "dns_records": "رکوردهای DNS",
+    "ssl_info": "اطلاعات SSL",
+    "whois_data": "اطلاعات WHOIS",
+    "location": "موقعیت",
+    "organization": "سازمان",
+    "status": "وضعیت",
+    "response_time": "زمان پاسخ",
+    "technologies": "تکنولوژی‌ها",
+    "security_status": "وضعیت امنیتی",
+    "filtered": "فیلتر شده",
+    "not_filtered": "فیلتر نشده",
+    "protected": "محافظت شده",
+    "not_protected": "محافظت نشده"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "errors": {
+    "invalid_domain": "Invalid domain format",
+    "invalid_ip": "Invalid IP address format",
+    "connection_timeout": "Connection timeout",
+    "dns_resolution_failed": "DNS resolution failed",
+    "ssl_error": "SSL certificate error",
+    "whois_error": "WHOIS lookup failed",
+    "network_error": "Network error occurred",
+    "not_found": "Resource not found",
+    "permission_denied": "Permission denied",
+    "rate_limited": "Rate limit exceeded"
+  },
+  "messages": {
+    "checking_domain": "Checking domain",
+    "resolving_ip": "Resolving IP address",
+    "fetching_dns": "Fetching DNS records",
+    "checking_ssl": "Checking SSL certificate",
+    "performing_whois": "Performing WHOIS lookup",
+    "locating_ip": "Locating IP geographically",
+    "checking_availability": "Checking availability",
+    "scanning_security": "Scanning security",
+    "detecting_tech": "Detecting technologies",
+    "complete": "Analysis complete"
+  },
+  "results": {
+    "ip_address": "IP Address",
+    "domain_name": "Domain Name",
+    "dns_records": "DNS Records",
+    "ssl_info": "SSL Information",
+    "whois_data": "WHOIS Data",
+    "location": "Location",
+    "organization": "Organization",
+    "status": "Status",
+    "response_time": "Response Time",
+    "technologies": "Technologies",
+    "security_status": "Security Status",
+    "filtered": "Filtered",
+    "not_filtered": "Not Filtered",
+    "protected": "Protected",
+    "not_protected": "Not Protected"
+  }
+}

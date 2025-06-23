@@ -1,0 +1,13 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include requirements.txt
+recursive-include deeprecon/locales *.json
+recursive-include deeprecon *.py
+exclude test.py
+exclude tests/*
+prune tests/
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store 
