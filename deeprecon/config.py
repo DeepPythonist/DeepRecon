@@ -49,3 +49,25 @@ TECH_PATTERNS = {
 CACHE_ENABLED = True
 CACHE_TTL = 3600
 MAX_CACHE_SIZE = 1000
+
+NETWORK_SCAN_TIMEOUT = 30
+NETWORK_DISCOVERY_TIMEOUT = 60
+PORT_SCAN_TIMEOUT = 120
+PING_COUNT = 4
+MAX_THREADS = 50
+
+SCAN_COMMON_PORTS = [21, 22, 23, 25, 53, 80, 110, 143, 443, 993, 995]
+FULL_PORT_RANGE = range(1, 65536)
+
+BANDWIDTH_TEST_SERVERS = [
+    'speedtest.net',
+    'fast.com',
+    'testmy.net'
+]
+
+NETWORK_INTERFACE_TYPES = {
+    'ethernet': ['eth', 'ens', 'enp'],
+    'wireless': ['wlan', 'wlp'],
+    'loopback': ['lo'],
+    'virtual': ['docker', 'br-', 'veth', 'tun', 'tap']
+}

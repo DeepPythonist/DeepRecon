@@ -25,6 +25,53 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Nothing yet
 
+## [1.1.0] - 2024-12-24
+
+### Added
+- 🌐 **Network Analysis Module**
+  - Network interface discovery and monitoring
+  - Network device scanning and identification
+  - Advanced port scanning with multi-threading
+  - Network performance analysis and metrics
+  - Network security scanning and assessment
+  - Real-time network topology mapping
+
+- 🔧 **Network Utility Functions**
+  - Subnet calculation and network analysis
+  - MAC address vendor identification
+  - ARP table parsing and analysis
+  - Routing table extraction
+  - Network speed testing integration
+  - Port knocking functionality
+  - Public IP address detection
+
+- 🚀 **Performance Enhancements**
+  - Multi-threaded network scanning (up to 50 concurrent connections)
+  - Optimized network discovery algorithms
+  - Cross-platform network interface support
+  - Enhanced timeout management for network operations
+
+- 📊 **Extended CLI Support**
+  - New `network` module option for CLI
+  - Comprehensive network analysis output formats
+  - Integration with existing output formats (JSON, CSV, pretty print)
+
+### Changed
+- Enhanced error handling for network operations
+- Improved cross-platform compatibility (Windows, macOS, Linux)
+- Updated CLI help messages for new network module
+
+### Dependencies
+- Added `psutil>=5.9.0` for system and network monitoring
+- Added `netifaces>=0.11.0` for network interface management
+- Added `speedtest-cli>=2.1.3` for network speed testing
+
+### Technical Improvements
+- Thread-safe network operations
+- Memory-efficient network scanning
+- Graceful degradation when dependencies are missing
+- Comprehensive input validation for network functions
+
 ## [1.0.0] - 2024-06-24
 
 ### Added

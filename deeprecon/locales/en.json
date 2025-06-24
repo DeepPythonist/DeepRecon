@@ -21,6 +21,10 @@
     "checking_availability": "Checking availability",
     "scanning_security": "Scanning security",
     "detecting_tech": "Detecting technologies",
+    "scanning_network": "Scanning network topology",
+    "discovering_devices": "Discovering network devices",
+    "analyzing_performance": "Analyzing network performance",
+    "checking_network_security": "Checking network security",
     "complete": "Analysis complete"
   },
   "results": {
@@ -38,6 +42,13 @@
     "filtered": "Filtered",
     "not_filtered": "Not Filtered",
     "protected": "Protected",
-    "not_protected": "Not Protected"
+    "not_protected": "Not Protected",
+    "network_interfaces": "Network Interfaces",
+    "connected_devices": "Connected Devices",
+    "network_performance": "Network Performance",
+    "network_security": "Network Security",
+    "bandwidth": "Bandwidth",
+    "latency": "Latency",
+    "packet_loss": "Packet Loss"
   }
 }

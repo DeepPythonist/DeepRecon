@@ -11,6 +11,7 @@ from .ssl import get_ssl_info, ssl_grade
 from .availability import ping, get_http_status
 from .security import is_filtered, has_waf, get_security_score
 from .tech_detect import detect_technologies
+from .network import get_network_interfaces, scan_network_devices, network_performance, network_security_scan
 from .utils.formatter import to_json, export_to_csv
 from .utils.validator import validate_domain, validate_ip
 
@@ -28,9 +29,9 @@ def main():
     parser.add_argument(
         '-m', '--modules',
         nargs='+',
-        choices=['resolve', 'dns', 'whois', 'geoip', 'ssl', 'availability', 'security', 'tech'],
+        choices=['resolve', 'dns', 'whois', 'geoip', 'ssl', 'availability', 'security', 'tech', 'network'],
         default=['resolve', 'dns', 'whois', 'geoip', 'ssl', 'availability', 'security', 'tech'],
-        help='Modules to run (default: all)'
+        help='Modules to run (default: all except network)'
     )
     
     parser.add_argument(
@@ -130,6 +131,16 @@ def main():
         if not args.quiet:
             print(get_message('messages.detecting_tech'))
         results['tech'] = detect_technologies(target)
+    
+    if 'network' in args.modules:
+        if not args.quiet:
+            print(get_message('messages.scanning_network'))
+        results['network'] = {
+            'interfaces': get_network_interfaces(),
+            'devices': scan_network_devices(),
+            'performance': network_performance(),
+            'security': network_security_scan()
+        }
     
     if not args.quiet:
         print(f"\n{get_message('messages.complete')}\n")

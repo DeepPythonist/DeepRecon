@@ -48,6 +48,14 @@ DeepRecon provides a comprehensive suite of tools for analyzing domains and IP a
 - **Server Identification**: Web server and proxy detection
 - **Meta Information**: Page titles, meta tags extraction
 
+### 🌐 Network Analysis
+- **Interface Discovery**: Network interface monitoring and analysis
+- **Device Scanning**: Local network device identification
+- **Port Scanning**: Advanced multi-threaded port scanning
+- **Performance Metrics**: Network speed and latency analysis
+- **Security Assessment**: Network vulnerability scanning
+- **Topology Mapping**: Network structure visualization
+
 ### 🌍 Multi-language Support
 - **English** and **Persian (فارسی)** interface
 - **Internationalization**: Easy to extend for more languages
@@ -86,6 +94,9 @@ DeepRecon automatically installs these required packages:
 - `pyOpenSSL` - SSL/TLS toolkit
 - `beautifulsoup4` - HTML parser
 - `lxml` - XML/HTML parser
+- `psutil` - System and network monitoring
+- `netifaces` - Network interface management
+- `speedtest-cli` - Network speed testing
 
 ---
 
@@ -100,6 +111,9 @@ deeprecon google.com
 # Specific analysis modules
 deeprecon github.com --modules resolve dns ssl
 
+# Include network analysis
+deeprecon example.com --modules resolve dns network
+
 # Output in JSON format
 deeprecon example.com --output json
 
@@ -111,12 +125,15 @@ deeprecon google.com --language fa
 
 # Quiet mode (results only)
 deeprecon google.com --quiet
+
+# Network analysis only
+deeprecon --modules network
 ```
 
 ### Python API Usage
 
 ```python
-from deeprecon import resolve, dns, geoip, ssl
+from deeprecon import resolve, dns, geoip, ssl, network
 
 # Basic domain to IP resolution
 ip = resolve.get_ip('google.com')
@@ -133,6 +150,14 @@ print(f"Location: {location['city']}, {location['country']}")
 # SSL certificate information
 ssl_info = ssl.get_ssl_info('github.com')
 print(f"SSL Issuer: {ssl_info['issuer']['organizationName']}")
+
+# Network analysis
+interfaces = network.get_network_interfaces()
+print(f"Network Interfaces: {list(interfaces.keys())}")
+
+# Scan network devices
+devices = network.scan_network_devices()
+print(f"Found {len(devices)} devices on network")
 ```
 
 ---
@@ -148,7 +173,7 @@ deeprecon <target> [options]
 
 #### Options
 - `--modules, -m`: Specify analysis modules
-  - Available: `resolve`, `dns`, `whois`, `geoip`, `ssl`, `availability`, `security`, `tech`
+  - Available: `resolve`, `dns`, `whois`, `geoip`, `ssl`, `availability`, `security`, `tech`, `network`
 - `--output, -o`: Output format (`json`, `csv`, `pretty`)
 - `--file, -f`: Save output to file
 - `--language, -l`: Interface language (`en`, `fa`)
@@ -164,6 +189,12 @@ deeprecon 8.8.8.8
 
 # Custom modules
 deeprecon google.com -m resolve dns ssl
+
+# Network analysis
+deeprecon -m network
+
+# Combined analysis
+deeprecon example.com -m resolve dns network
 
 # JSON output to file
 deeprecon github.com -o json -f analysis.json
@@ -242,6 +273,29 @@ waf = has_waf('example.com')
 score = get_security_score('example.com')
 ```
 
+#### Network Module
+```python
+from deeprecon.network import (
+    get_network_interfaces, scan_network_devices,
+    advanced_port_scan, network_performance, network_security_scan
+)
+
+# Get network interfaces
+interfaces = get_network_interfaces()
+
+# Scan network devices
+devices = scan_network_devices('192.168.1.0/24')
+
+# Advanced port scanning
+ports = advanced_port_scan('192.168.1.1', '1-1000')
+
+# Network performance analysis
+performance = network_performance()
+
+# Network security scan
+security = network_security_scan()
+```
+
 ---
 
 ## 🏗️ Architecture
@@ -259,9 +313,11 @@ deeprecon/
 ├── availability.py    # Connectivity testing
 ├── security.py        # Security analysis
 ├── tech_detect.py     # Technology detection
+├── network.py         # Network analysis and scanning
 ├── utils/
 │   ├── validator.py   # Input validation
-│   └── formatter.py   # Output formatting
+│   ├── formatter.py   # Output formatting
+│   └── network_utils.py # Network utility functions
 └── locales/           # Internationalization
     ├── en.json
     └── fa.json
@@ -288,6 +344,9 @@ deeprecon/
 - **Port scanning** for connectivity testing
 - **Geolocation analysis** for CDN optimization
 - **Technology stack identification**
+- **Local network discovery** and device mapping
+- **Network performance monitoring** and optimization
+- **Network security assessment** and vulnerability scanning
 
 ### Research & Analytics
 - **Domain analysis** for market research
@@ -341,6 +400,8 @@ We welcome contributions! Here's how you can help:
 - 🔧 **New analysis modules**
 - 📊 **Enhanced output formats**
 - 🚀 **Performance optimizations**
+- 🌐 **Extended network analysis features**
+- 🔒 **Advanced security scanning**
 - 🐛 **Bug fixes and improvements**
 
 ---

@@ -21,6 +21,10 @@
     "checking_availability": "بررسی دسترس‌پذیری",
     "scanning_security": "اسکن امنیتی",
     "detecting_tech": "شناسایی تکنولوژی‌ها",
+    "scanning_network": "اسکن توپولوژی شبکه",
+    "discovering_devices": "کشف دستگاه‌های شبکه",
+    "analyzing_performance": "تحلیل عملکرد شبکه",
+    "checking_network_security": "بررسی امنیت شبکه",
     "complete": "تحلیل کامل شد"
   },
   "results": {
@@ -38,6 +42,13 @@
     "filtered": "فیلتر شده",
     "not_filtered": "فیلتر نشده",
     "protected": "محافظت شده",
-    "not_protected": "محافظت نشده"
+    "not_protected": "محافظت نشده",
+    "network_interfaces": "رابط‌های شبکه",
+    "connected_devices": "دستگاه‌های متصل",
+    "network_performance": "عملکرد شبکه",
+    "network_security": "امنیت شبکه",
+    "bandwidth": "پهنای باند",
+    "latency": "تاخیر",
+    "packet_loss": "از دست رفتن بسته"
   }
 }
