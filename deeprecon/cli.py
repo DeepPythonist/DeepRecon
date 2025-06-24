@@ -2,17 +2,17 @@
 
 import argparse
 import sys
-from deeprecon import set_language, get_message
-from deeprecon.resolve import resolve_all
-from deeprecon.dns import get_dns_records
-from deeprecon.whois import whois_domain, whois_ip
-from deeprecon.geoip import geoip
-from deeprecon.ssl import get_ssl_info, ssl_grade
-from deeprecon.availability import ping, get_http_status
-from deeprecon.security import is_filtered, has_waf, get_security_score
-from deeprecon.tech_detect import detect_technologies
-from deeprecon.utils.formatter import to_json, export_to_csv
-from deeprecon.utils.validator import validate_domain, validate_ip
+from . import set_language, get_message
+from .resolve import resolve_all
+from .dns import get_dns_records
+from .whois import whois_domain, whois_ip
+from .geoip import geoip
+from .ssl import get_ssl_info, ssl_grade
+from .availability import ping, get_http_status
+from .security import is_filtered, has_waf, get_security_score
+from .tech_detect import detect_technologies
+from .utils.formatter import to_json, export_to_csv
+from .utils.validator import validate_domain, validate_ip
 
 def main():
     parser = argparse.ArgumentParser(

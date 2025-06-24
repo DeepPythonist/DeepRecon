@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "deeprecon"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
     {name = "Mohammad Rasol Esfandiari", email = "mrasolesfandiari@gmail.com"},
 ]
 description = "A powerful, modular Python library for comprehensive domain and IP analysis"
 readme = "README.md"
-license = {text = "MIT"}
+license = {file = "LICENSE"}
 requires-python = ">=3.8"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -59,10 +59,10 @@ Changelog = "https://github.com/DeepPythonist/DeepRecon/blob/main/CHANGELOG.md"
 "Bug Reports" = "https://github.com/DeepPythonist/DeepRecon/issues"
 
 [project.scripts]
-deeprecon = "cli:main"
+deeprecon = "deeprecon.cli:main"
 
 [tool.setuptools]
-packages = ["deeprecon"]
+packages = ["deeprecon", "deeprecon.utils", "deeprecon.locales"]
 include-package-data = true
 
 [tool.setuptools.package-data]

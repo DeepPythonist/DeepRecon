@@ -11,7 +11,7 @@ with open("requirements.txt", "r", encoding="utf-8") as f:
 
 setup(
     name="deeprecon",
-    version="1.0.0",
+    version="1.0.1",
     author="Mohammad Rasol Esfandiari",
     author_email="mrasolesfandiari@gmail.com",
     description="A powerful, modular Python library for comprehensive domain and IP analysis",
@@ -41,7 +41,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'deeprecon=cli:main',
+            'deeprecon=deeprecon.cli:main',
         ],
     },
     classifiers=[
